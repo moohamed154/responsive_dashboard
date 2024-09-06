@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/custom_background_container.dart';
-import 'package:responsive_dash_board/widgets/latest_transction_list_view.dart';
+import 'package:responsive_dash_board/widgets/latest_transction.dart';
+import 'package:responsive_dash_board/widgets/quick_invoice_form.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_header.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -14,14 +14,12 @@ class QuickInvoice extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           QuickInvoiceHeader(),
-          Padding(
-            padding: EdgeInsets.only(top: 24, bottom: 12),
-            child: Text(
-              'Latest Transaction',
-              style: AppStyles.styleMedium16,
-            ),
+          LatestTransction(),
+          Divider(
+            height: 48,
+            color: Color(0xffF1F1F1),
           ),
-          LatestTransctionListView(),
+          QuickInvoiceForm(),
         ],
       ),
     );

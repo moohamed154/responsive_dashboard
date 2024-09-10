@@ -30,6 +30,12 @@ abstract class AppStyles {
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle styleMedium20 = TextStyle(
+    color: Color(0xFF064061),
+    fontSize: 20,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w500,
+  );
   static const TextStyle styleRegular12 = TextStyle(
     color: Color(0xFFAAAAAA),
     fontSize: 12,

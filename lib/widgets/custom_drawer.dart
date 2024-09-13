@@ -15,68 +15,56 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       width: MediaQuery.sizeOf(context).width * 0.7,
       color: const Color(0xFFFFFFFF),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  left: 40, top: 50, right: 47, bottom: 9),
-              child: Container(
-                color: const Color(0xFFC4C4C4),
-                width: 193,
-                height: 53,
-                child: Center(
-                  child: SvgPicture.asset(Assets.imagesGallery),
+      child: const SafeArea(
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: UserInfoListTile(
+                userInfoModel: UserInfoModel(
+                  image: Assets.imagesAvatar3,
+                  title: 'MOhamed HAmdy',
+                  subtitle: 'demo@gmail.com',
                 ),
               ),
             ),
-          ),
-          const SliverToBoxAdapter(
-            child: UserInfoListTile(
-              userInfoModel: UserInfoModel(
-                image: Assets.imagesAvatar3,
-                title: 'MOhamed HAmdy',
-                subtitle: 'demo@gmail.com',
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 8,
               ),
             ),
-          ),
-          const SliverToBoxAdapter(
-            child: SizedBox(
-              height: 8,
-            ),
-          ),
-          const DrawerItemsListView(),
-          const SliverFillRemaining(
-            hasScrollBody: false,
-            child: Column(
-              children: [
-                Expanded(
-                  child: SizedBox(
+            DrawerItemsListView(),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  Expanded(
+                    child: SizedBox(
+                      height: 20,
+                    ),
+                  ),
+                  InActiveDrawerItem(
+                    drawerItemModel: DrawerItemModel(
+                      title: 'Setting system',
+                      image: Assets.imagesSettings,
+                    ),
+                  ),
+                  SizedBox(
                     height: 20,
                   ),
-                ),
-                InActiveDrawerItem(
-                  drawerItemModel: DrawerItemModel(
-                    title: 'Setting system',
-                    image: Assets.imagesSettings,
+                  InActiveDrawerItem(
+                    drawerItemModel: DrawerItemModel(
+                      title: 'Logout account',
+                      image: Assets.imagesLogout,
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                InActiveDrawerItem(
-                  drawerItemModel: DrawerItemModel(
-                    title: 'Logout account',
-                    image: Assets.imagesLogout,
+                  SizedBox(
+                    height: 48,
                   ),
-                ),
-                SizedBox(
-                  height: 48,
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

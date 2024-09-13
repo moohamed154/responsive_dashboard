@@ -34,7 +34,7 @@ class MyCard extends StatelessWidget {
                 ),
               ),
               subtitle: Text(
-                "Syah Bandi",
+                "MOhamed HAmdy",
                 style: AppStyles.styleMedium20.copyWith(
                   color: Colors.white,
                 ),

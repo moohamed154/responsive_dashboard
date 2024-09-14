@@ -35,7 +35,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
       sections: [
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
-          titleStyle: AppStyles.styleRegular16
+          titleStyle: AppStyles.styleRegular16(context)
               .copyWith(color: activeIndex == 0 ? null : Colors.white),
           radius: activeIndex == 0 ? 60 : 50,
           showTitle: true,
@@ -44,7 +44,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 1 ? 2 : null,
-          titleStyle: AppStyles.styleRegular16
+          titleStyle: AppStyles.styleRegular16(context)
               .copyWith(color: activeIndex == 1 ? null : Colors.white),
           radius: activeIndex == 1 ? 60 : 50,
           showTitle: true,
@@ -53,7 +53,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 2 ? 2 : null,
-          titleStyle: AppStyles.styleRegular16
+          titleStyle: AppStyles.styleRegular16(context)
               .copyWith(color: activeIndex == 2 ? null : Colors.white),
           radius: activeIndex == 2 ? 60 : 50,
           showTitle: true,
@@ -62,7 +62,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         ),
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,
-          titleStyle: AppStyles.styleRegular16
+          titleStyle: AppStyles.styleRegular16(context)
               .copyWith(color: activeIndex == 3 ? null : Colors.white),
           radius: activeIndex == 3 ? 60 : 50,
           showTitle: true,

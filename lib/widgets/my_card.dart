@@ -35,7 +35,7 @@ class MyCard extends StatelessWidget {
               ),
               subtitle: Text(
                 "MOhamed HAmdy",
-                style: AppStyles.styleMedium20(context).copyWith(
+                style: AppStyles.styleMedium16(context).copyWith(
                   color: Colors.white,
                 ),
               ),
@@ -67,8 +67,10 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 54 - 28,
+            const Flexible(
+              child: SizedBox(
+                height: 54 - 28,
+              ),
             ),
           ],
         ),
